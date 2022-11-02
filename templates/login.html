@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/fontawesome.min.css" integrity="sha512-RvQxwf+3zJuNwl4e0sZjQeX7kUa3o82bDETpgVCH2RiwYSZVDdFJ7N/woNigN/ldyOOoKw8584jM4plQdt8bhA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/solid.min.css" integrity="sha512-uj2QCZdpo8PSbRGL/g5mXek6HM/APd7k/B5Hx/rkVFPNOxAQMXD+t+bG4Zv8OAdUpydZTU3UHmyjjiHv2Ww0PA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Davis Blog | Login</title>
+</head>
+<body>
+    <div class="my-10 lg:mx-44 lg:my-20">
+        <h1 class="text-3xl font-semibold text-center">Login to Davis Blog</h1>
+        <div class="mt-10 mx-auto bg-slate-200 rounded-lg shadow-md sm:w-[700px] w-[90%] h-[400px]">
+            <div class="logo w-[100%] flex justify-center">
+                <a class="flex title-font font-medium items-center text-black my-5" href="/">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-blue-500 rounded-full" viewBox="0 0 24 24">
+                      <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                    </svg>
+                    <span class="ml-3 text-xl">Davis Blog</span>
+                  </a>
+            </div>
+            <form method="post" action="/login/" class="input-field w-[100%] mt-3">
+                {% csrf_token %}
+                <div class="flex py-2 bg-white rounded-md justify-center lg:w-[46%] w-[90%] mx-auto">
+                    <span><i class="fa-solid fa-user mx-auto px-2 py-1 text-lg"></i></span>
+                    <span><input type="text" name="username" id="username" placeholder="username" class="text-lg px-5 w-[95%] py-1 text-slate-600 outline-none rounded-md border-2 border-slate-200" required /></span>
+                </div>
+                <div class="flex py-2 mt-2 bg-white rounded-md justify-center lg:w-[46%] w-[90%] mx-auto">
+                    <span><i class="fa-solid fa-key mx-auto px-2 py-1 text-lg"></i></span>
+                    <span><input type="password" name="password" id="password" placeholder="password" class="text-lg px-5 w-[95%] py-1 text-slate-600 outline-none rounded-md border-2 border-slate-200" required /></span>
+                </div>
+                <div class="flex justify-center mt-3">
+                    <button type="submit" class="px-5 py-1 text-lg font-semibold bg-blue-600 text-white hover:bg-gray-900 rounded-md">Log in</button>
+                </div>
+            </form>
+            <div class="mt-3">
+                <p class="text-sm text-slate-600 text-center my-1">New to Davis Blog? <a href="/signup" class="text-blue-600">Signup</a></p>
+                <p class="text-sm text-slate-600 text-center my-1">Back to Home Page: <a href="/" class="text-blue-600">Davis Blog</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

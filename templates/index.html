@@ -1,0 +1,109 @@
+{% extends "base.html" %}
+
+{% block title %} Home {% endblock title %}
+
+{% block content %}
+    {% load static %}
+    <div class="mx-10 my-10 lg:mx-72 lg:my-20">
+        <div id="header-content" class="flex flex-col justify-center lg:flex-row lg:justify-between">
+            <div class="w-[90%] lg:w-[50%]">
+                <h1 class="text-4xl font-bold text-center lg:text-left">Welcome {% if user.is_authenticated %} {{request.user.first_name}} {{request.user.last_name}} {% else %}to <span class="text-indigo-700">Davis Blog</span>{% endif %}</h1>
+                <p class="mt-5 text-lg font-semibold text-slate-500 text-justify">
+                    Are you looking for coding blog website? If Yes, then you are in the right place.
+                    This is the plateform, where you will learn new technologies 
+                    and you will remain updated and concerned of new technologies 
+                    related to Software Development.
+                </p>
+                <div class="mt-5">
+                    <a href="/blog"><button class="px-5 py-2 text-lg font-semibold bg-indigo-700 text-white hover:bg-gray-900 rounded-md">Explore Blog</button></a>
+                </div>
+            </div>
+            <div class="w-[90%] lg:w-[50%]">
+                <img src="{% static './img/laptop.jpg' %}" class="w-[70%] mt-5 lg:mt-2 mx-auto shadow-lg" alt="">
+            </div>
+        </div>
+
+        <div class="mt-20">
+            <h1 class="text-3xl lg:text-4xl font-bold"><span class="text-indigo-700">Blog Categories</span> We Provide</h1>
+
+            <!-- First Row for Desktop -->
+            <div class="mt-10 lg:mx-2 flex flex-col lg:flex-row justify-center lg:justify-evenly w-[100%]">
+                <div class="my-5 bg-slate-800 py-10 rounded-md lg:w-[300px] hover:cursor-pointer hover:bg-gray-900">
+                    <div class="text-2xl font-semibold text-center">
+                        <i class="fa-brands fa-github mr-2 text-indigo-300"></i>
+                        <div class="text-xl text-white">Web Development</div>
+                    </div>
+                    <div class="mt-5 px-20 mx-auto text-white">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Facere ea dignissimos deleniti nesciunt ipsa neque quibusdam 
+                        aut sed necessitatibus autem, dolore eos.
+                    </div>
+                </div>
+
+                <div class="my-5 lg:mx-2 bg-slate-800 py-10 rounded-md lg:w-[300px] hover:cursor-pointer hover:bg-gray-900">
+                    <div class="text-2xl font-semibold text-center">
+                        <i class="fa-brands fa-uikit mr-2 text-indigo-300"></i>
+                        <div class="text-xl text-white">Web Design</div>
+                    </div>
+                    <div class="mt-5 px-20 mx-auto text-white">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Facere ea dignissimos deleniti nesciunt ipsa neque quibusdam 
+                        aut sed necessitatibus autem, dolore eos.
+                    </div>
+                </div>
+
+                <div class="my-5 lg:mx-2 bg-slate-800 py-10 rounded-md lg:w-[300px] hover:cursor-pointer hover:bg-gray-900">
+                    <div class="text-2xl font-semibold text-center">
+                        <i class="fa-brands fa-aws mr-2 text-indigo-300"></i>
+                        <div class="text-xl text-white">Cloud Computing</div>
+                    </div>
+                    <div class="mt-5 px-20 mx-auto text-white">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Facere ea dignissimos deleniti nesciunt ipsa neque quibusdam 
+                        aut sed necessitatibus autem, dolore eos.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Second Row for Desktop -->
+            <div class="mt-10 lg:mx-2 flex flex-col lg:flex-row justify-center lg:justify-evenly w-[100%]">
+                <div class="my-5 bg-slate-800 py-10 rounded-md lg:w-[300px] hover:cursor-pointer hover:bg-gray-900">
+                    <div class="text-2xl font-semibold text-center">
+                        <i class="fa-brands fa-android mr-2 text-indigo-300"></i>
+                        <div class="text-xl text-white">App Development</div>
+                    </div>
+                    <div class="mt-5 px-20 mx-auto text-white">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Facere ea dignissimos deleniti nesciunt ipsa neque quibusdam 
+                        aut sed necessitatibus autem, dolore eos.
+                    </div>
+                </div>
+
+                <div class="my-5 lg:mx-2 bg-slate-800 py-10 rounded-md lg:w-[300px] hover:cursor-pointer hover:bg-gray-900">
+                    <div class="text-2xl font-semibold text-center">
+                        <i class="fa-brands fa-ethereum mr-2 text-indigo-300"></i>
+                        <div class="text-xl text-white">Blockchain</div>
+                    </div>
+                    <div class="mt-5 px-20 mx-auto text-white">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Facere ea dignissimos deleniti nesciunt ipsa neque quibusdam 
+                        aut sed necessitatibus autem, dolore eos.
+                    </div>
+                </div>
+
+                <div class="my-5 lg:mx-2 bg-slate-800 py-10 rounded-md lg:w-[300px] hover:cursor-pointer hover:bg-gray-900">
+                    <div class="text-2xl font-semibold text-center">
+                        <i class="fa-solid fa-database mr-2 text-indigo-300"></i>
+                        <div class="text-xl text-white">DBMS</div>
+                    </div>
+                    <div class="mt-5 px-20 mx-auto text-white">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Facere ea dignissimos deleniti nesciunt ipsa neque quibusdam 
+                        aut sed necessitatibus autem, dolore eos. 
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+{% endblock content %}
